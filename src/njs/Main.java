@@ -36,6 +36,12 @@ public class Main {
 					f.append((obj.hasSlot(i)?convert(obj.getSlot(i)):null));
 				}
 				return f;
+			}else{
+				FObj f=new FObj();
+				for(String s:obj.keySet()){
+					f.set(s,convert(obj.getMember(s)));
+				}
+				return f;
 			}
 		}
 		return null;
